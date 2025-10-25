@@ -1,0 +1,55 @@
+{
+  "subject": "english",
+  "grade": 1,
+  "locale": "es",
+  "units": [
+    {
+      "id": "nouns",
+      "title": "Sustantivos",
+      "cards": [
+        {"type": "text", "title": "¿Qué son los sustantivos?", "body": "Los sustantivos son nombres de personas, lugares, cosas o ideas."},
+        {"type": "example", "body": "Gato, escuela, libro"},
+        {"type": "text", "title": "Ejemplos", "body": "Persona: maestro, Lugar: parque, Cosa: manzana"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuál es un sustantivo?","options":["Correr","Gato","Saltar"],"answerIndex":1,"explanation":"Gato es una cosa, un sustantivo."},
+        {"id":"q2","prompt":"¿Cuál es un sustantivo?","options":["Grande","Escuela","Rápido"],"answerIndex":1,"explanation":"Escuela es un lugar, un sustantivo."},
+        {"id":"q3","prompt":"¿Cuál es un sustantivo?","options":["Comer","Libro","Alto"],"answerIndex":1,"explanation":"Libro es una cosa, un sustantivo."},
+        {"id":"q4","prompt":"¿Cuál es un sustantivo?","options":["Feliz","Maestro","Lento"],"answerIndex":1,"explanation":"Maestro es una persona, un sustantivo."},
+        {"id":"q5","prompt":"¿Cuál es un sustantivo?","options":["Jugar","Parque","Cantar"],"answerIndex":1,"explanation":"Parque es un lugar, un sustantivo."}
+      ]
+    },
+    {
+      "id": "verbs",
+      "title": "Verbos",
+      "cards": [
+        {"type": "text", "title": "¿Qué son los verbos?", "body": "Los verbos son palabras de acción o estado."},
+        {"type": "example", "body": "Correr, comer, es"},
+        {"type": "text", "title": "Ejemplos", "body": "Acción: saltar, pensar, dormir"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuál es un verbo?","options":["Gato","Correr","Grande"],"answerIndex":1,"explanation":"Correr es una acción, un verbo."},
+        {"id":"q2","prompt":"¿Cuál es un verbo?","options":["Escuela","Comer","Rojo"],"answerIndex":1,"explanation":"Comer es una acción, un verbo."},
+        {"id":"q3","prompt":"¿Cuál es un verbo?","options":["Libro","Saltar","Alto"],"answerIndex":1,"explanation":"Saltar es una acción, un verbo."},
+        {"id":"q4","prompt":"¿Cuál es un verbo?","options":["Maestro","Es","Pequeño"],"answerIndex":1,"explanation":"Es muestra estado, un verbo."},
+        {"id":"q5","prompt":"¿Cuál es un verbo?","options":["Parque","Dormir","Azul"],"answerIndex":1,"explanation":"Dormir es una acción, un verbo."}
+      ]
+    },
+    {
+      "id": "simple_sentences",
+      "title": "Oraciones Simples",
+      "cards": [
+        {"type": "text", "title": "¿Qué son las oraciones?", "body": "Las oraciones son grupos de palabras que tienen sentido."},
+        {"type": "example", "body": "El gato corre."},
+        {"type": "text", "title": "Estructura", "body": "Sujeto + verbo + objeto"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuál es una oración?","options":["Gato corre","El gato corre.","Corre gato"],"answerIndex":1,"explanation":"'El gato corre.' es una oración completa."},
+        {"id":"q2","prompt":"¿Cuál es una oración?","options":["Libro rojo","Leo el libro.","Leo libro"],"answerIndex":1,"explanation":"'Leo el libro.' es una oración completa."},
+        {"id":"q3","prompt":"¿Cuál es una oración?","options":["Perro grande","El perro es grande.","Grande perro es"],"answerIndex":1,"explanation":"'El perro es grande.' es una oración completa."},
+        {"id":"q4","prompt":"¿Cuál es una oración?","options":["Comer manzana","Ella come una manzana.","Manzana come ella"],"answerIndex":1,"explanation":"'Ella come una manzana.' es una oración completa."},
+        {"id":"q5","prompt":"¿Cuál es una oración?","options":["Jugar pelota","Ellos juegan pelota.","Pelota juegan ellos"],"answerIndex":1,"explanation":"'Ellos juegan pelota.' es una oración completa."}
+      ]
+    }
+  ]
+}

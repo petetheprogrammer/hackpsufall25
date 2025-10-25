@@ -1,0 +1,48 @@
+{
+  "en": {
+    "math:addition": [
+      "Adding means putting groups together. Try 2 apples + 3 apples = 5."
+    ],
+    "math:subtraction": [
+      "Subtracting means taking away. Try 5 apples - 2 apples = 3."
+    ],
+    "math:multiplication": [
+      "Multiplication is repeated addition. 2 times 3 is 2+2+2=6."
+    ],
+    "math:division": [
+      "Division splits into equal parts. 6 divided by 2 is 3."
+    ],
+    "english:nouns": [
+      "A noun is a person, place, or thing. Example: cat, school, book."
+    ],
+    "english:verbs": [
+      "A verb is an action word. Example: run, eat, sleep."
+    ],
+    "english:adjectives": [
+      "An adjective describes a noun. Example: big cat, red apple."
+    ]
+  },
+  "es": {
+    "math:addition": [
+      "Sumar significa juntar grupos. Prueba 2 manzanas + 3 manzanas = 5."
+    ],
+    "math:subtraction": [
+      "Restar significa quitar. Prueba 5 manzanas - 2 manzanas = 3."
+    ],
+    "math:multiplication": [
+      "La multiplicación es suma repetida. 2 veces 3 es 2+2+2=6."
+    ],
+    "math:division": [
+      "La división divide en partes iguales. 6 dividido por 2 es 3."
+    ],
+    "english:nouns": [
+      "Un sustantivo es una persona, lugar o cosa. Ejemplo: gato, escuela, libro."
+    ],
+    "english:verbs": [
+      "Un verbo es una palabra de acción. Ejemplo: correr, comer, dormir."
+    ],
+    "english:adjectives": [
+      "Un adjetivo describe un sustantivo. Ejemplo: gato grande, manzana roja."
+    ]
+  }
+}

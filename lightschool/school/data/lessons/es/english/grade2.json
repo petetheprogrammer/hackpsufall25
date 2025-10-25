@@ -1,0 +1,55 @@
+{
+  "subject": "english",
+  "grade": 2,
+  "locale": "es",
+  "units": [
+    {
+      "id": "adjectives",
+      "title": "Adjetivos",
+      "cards": [
+        {"type": "text", "title": "¿Qué son los adjetivos?", "body": "Los adjetivos describen sustantivos."},
+        {"type": "example", "body": "Gato grande, manzana roja"},
+        {"type": "text", "title": "Ejemplos", "body": "Tamaño: pequeño, Color: azul, Forma: redondo"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuál es un adjetivo?","options":["Correr","Grande","Saltar"],"answerIndex":1,"explanation":"Grande describe tamaño."},
+        {"id":"q2","prompt":"¿Cuál es un adjetivo?","options":["Comer","Rojo","Dormir"],"answerIndex":1,"explanation":"Rojo describe color."},
+        {"id":"q3","prompt":"¿Cuál es un adjetivo?","options":["Libro","Alto","Leer"],"answerIndex":1,"explanation":"Alto describe altura."},
+        {"id":"q4","prompt":"¿Cuál es un adjetivo?","options":["Maestro","Redondo","Enseñar"],"answerIndex":1,"explanation":"Redondo describe forma."},
+        {"id":"q5","prompt":"¿Cuál es un adjetivo?","options":["Parque","Feliz","Jugar"],"answerIndex":1,"explanation":"Feliz describe sentimiento."}
+      ]
+    },
+    {
+      "id": "adverbs",
+      "title": "Adverbios",
+      "cards": [
+        {"type": "text", "title": "¿Qué son los adverbios?", "body": "Los adverbios describen verbos, adjetivos u otros adverbios."},
+        {"type": "example", "body": "Correr rápidamente, muy grande"},
+        {"type": "text", "title": "Ejemplos", "body": "Cómo: rápido, Cuándo: ahora, Dónde: aquí"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuál es un adverbio?","options":["Gato","Rápidamente","Grande"],"answerIndex":1,"explanation":"Rápidamente describe cómo."},
+        {"id":"q2","prompt":"¿Cuál es un adverbio?","options":["Escuela","Lentamente","Rojo"],"answerIndex":1,"explanation":"Lentamente describe cómo."},
+        {"id":"q3","prompt":"¿Cuál es un adverbio?","options":["Libro","Aquí","Alto"],"answerIndex":1,"explanation":"Aquí describe dónde."},
+        {"id":"q4","prompt":"¿Cuál es un adverbio?","options":["Maestro","Ahora","Redondo"],"answerIndex":1,"explanation":"Ahora describe cuándo."},
+        {"id":"q5","prompt":"¿Cuál es un adverbio?","options":["Parque","Muy","Feliz"],"answerIndex":1,"explanation":"Muy describe grado."}
+      ]
+    },
+    {
+      "id": "compound_sentences",
+      "title": "Oraciones Compuestas",
+      "cards": [
+        {"type": "text", "title": "¿Qué son las oraciones compuestas?", "body": "Dos oraciones simples unidas por 'y', 'o', 'pero'."},
+        {"type": "example", "body": "Me gustan los gatos y me gustan los perros."},
+        {"type": "text", "title": "Conjunciones", "body": "Y, o, pero conectan ideas."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuál es una oración compuesta?","options":["Me gustan los gatos.","Me gustan los gatos y los perros.","Gatos gustan."],"answerIndex":1,"explanation":"Une dos ideas con 'y'."},
+        {"id":"q2","prompt":"¿Cuál es una oración compuesta?","options":["Ella corre.","Ella corre o camina.","Corre ella."],"answerIndex":1,"explanation":"Une dos ideas con 'o'."},
+        {"id":"q3","prompt":"¿Cuál es una oración compuesta?","options":["Él es alto.","Él es alto pero delgado.","Alto él."],"answerIndex":1,"explanation":"Une dos ideas con 'pero'."},
+        {"id":"q4","prompt":"¿Cuál es una oración compuesta?","options":["Ellos juegan.","Ellos juegan y cantan.","Juegan ellos."],"answerIndex":1,"explanation":"Une dos ideas con 'y'."},
+        {"id":"q5","prompt":"¿Cuál es una oración compuesta?","options":["Comemos.","Comemos o bebemos.","Comemos."],"answerIndex":1,"explanation":"Une dos ideas con 'o'."}
+      ]
+    }
+  ]
+}

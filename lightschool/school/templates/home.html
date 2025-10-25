@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="home">
+    <h1>{% trans "Choose Your Adventure!" %}</h1>
+    <div class="subjects">
+        <div class="subject-card" onclick="selectSubject('math')">
+            <h2>{% trans "Math" %}</h2>
+            <p>{% trans "Numbers and Shapes" %}</p>
+        </div>
+        <div class="subject-card" onclick="selectSubject('english')">
+            <h2>{% trans "English" %}</h2>
+            <p>{% trans "Words and Stories" %}</p>
+        </div>
+    </div>
+    <div class="grades" id="grades" style="display:none;">
+        <h2>{% trans "Pick a Grade" %}</h2>
+        <div class="grade-buttons">
+            <button onclick="selectGrade(1)">{% trans "Grade 1" %}</button>
+            <button onclick="selectGrade(2)">{% trans "Grade 2" %}</button>
+            <button onclick="selectGrade(3)">{% trans "Grade 3" %}</button>
+        </div>
+    </div>
+</div>
+<script>
+let selectedSubject = null;
+function selectSubject(subject) {
+    selectedSubject = subject;
+    document.getElementById('grades').style.display = 'block';
+}
+function selectGrade(grade) {
+    window.location.href = `/subject/${selectedSubject}/grade/${grade}/`;
+}
+</script>
+{% endblock %}

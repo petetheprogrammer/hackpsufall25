@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans "LightSchool" %}</title>
+    <link rel="manifest" href="/static/manifest.json">
+    <link rel="stylesheet" href="/static/css/theme.css">
+    <script src="/static/js/app.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="/">{% trans "LightSchool" %}</a>
+            </div>
+            <div class="nav-center">
+                {% if subject %}
+                    <span>{% if subject == 'math' %}{% trans "Math" %}{% else %}{% trans "English" %}{% endif %}</span>
+                    <span>{% trans "Grade" %} {{ grade }}</span>
+                {% endif %}
+            </div>
+            <div class="nav-right">
+                <button onclick="setLang('en')">EN</button>
+                <button onclick="setLang('es')">ES</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>{% trans "Offline Learning for Kids" %}</p>
+    </footer>
+    <div id="tutor-bubble" class="tutor-bubble hidden">
+        <div class="tutor-header">
+            <span>{% trans "Ask Lumi" %}</span>
+            <button onclick="closeTutor()">×</button>
+        </div>
+        <div id="tutor-messages"></div>
+        <input id="tutor-input" type="text" placeholder="{% trans 'Ask a question...' %}">
+        <button onclick="sendTutorMessage()">{% trans "Send" %}</button>
+        <div id="tutor-badge" class="badge hidden">{% trans "Offline AI" %}</div>
+    </div>
+    <button id="tutor-button" class="tutor-button" onclick="openTutor()">?</button>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/static/sw.js');
+        }
+    </script>
+</body>
+</html>

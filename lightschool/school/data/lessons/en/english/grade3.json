@@ -1,0 +1,55 @@
+{
+  "subject": "english",
+  "grade": 3,
+  "locale": "en",
+  "units": [
+    {
+      "id": "pronouns",
+      "title": "Pronouns",
+      "cards": [
+        {"type": "text", "title": "What are pronouns?", "body": "Pronouns replace nouns."},
+        {"type": "example", "body": "He, she, it, they"},
+        {"type": "text", "title": "Examples", "body": "I, you, we, me, us"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"Which is a pronoun?","options":["Cat","He","Run"],"answerIndex":1,"explanation":"He replaces a noun."},
+        {"id":"q2","prompt":"Which is a pronoun?","options":["School","She","Big"],"answerIndex":1,"explanation":"She replaces a noun."},
+        {"id":"q3","prompt":"Which is a pronoun?","options":["Book","It","Read"],"answerIndex":1,"explanation":"It replaces a noun."},
+        {"id":"q4","prompt":"Which is a pronoun?","options":["Teacher","They","Teach"],"answerIndex":1,"explanation":"They replaces a noun."},
+        {"id":"q5","prompt":"Which is a pronoun?","options":["Park","We","Play"],"answerIndex":1,"explanation":"We replaces a noun."}
+      ]
+    },
+    {
+      "id": "prepositions",
+      "title": "Prepositions",
+      "cards": [
+        {"type": "text", "title": "What are prepositions?", "body": "Prepositions show relationships."},
+        {"type": "example", "body": "In, on, at, under"},
+        {"type": "text", "title": "Examples", "body": "Place: above, time: before"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"Which is a preposition?","options":["Cat","In","Run"],"answerIndex":1,"explanation":"In shows place."},
+        {"id":"q2","prompt":"Which is a preposition?","options":["School","On","Big"],"answerIndex":1,"explanation":"On shows place."},
+        {"id":"q3","prompt":"Which is a preposition?","options":["Book","At","Read"],"answerIndex":1,"explanation":"At shows place or time."},
+        {"id":"q4","prompt":"Which is a preposition?","options":["Teacher","Under","Teach"],"answerIndex":1,"explanation":"Under shows place."},
+        {"id":"q5","prompt":"Which is a preposition?","options":["Park","Before","Play"],"answerIndex":1,"explanation":"Before shows time."}
+      ]
+    },
+    {
+      "id": "complex_sentences",
+      "title": "Complex Sentences",
+      "cards": [
+        {"type": "text", "title": "What are complex sentences?", "body": "One main clause and one or more dependent clauses."},
+        {"type": "example", "body": "I eat because I am hungry."},
+        {"type": "text", "title": "Connectors", "body": "Because, when, if, although"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"Which is a complex sentence?","options":["I eat.","I eat because I am hungry.","Eat I."],"answerIndex":1,"explanation":"It has a main and dependent clause."},
+        {"id":"q2","prompt":"Which is a complex sentence?","options":["She runs.","She runs when it rains.","Runs she."],"answerIndex":1,"explanation":"It has a main and dependent clause."},
+        {"id":"q3","prompt":"Which is a complex sentence?","options":["He is tall.","He is tall although he is young.","Tall he."],"answerIndex":1,"explanation":"It has a main and dependent clause."},
+        {"id":"q4","prompt":"Which is a complex sentence?","options":["They play.","They play if it is sunny.","Play they."],"answerIndex":1,"explanation":"It has a main and dependent clause."},
+        {"id":"q5","prompt":"Which is a complex sentence?","options":["We sleep.","We sleep when it is night.","Sleep we."],"answerIndex":1,"explanation":"It has a main and dependent clause."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="error">
+    <h1>{% trans "Error" %}</h1>
+    <p>{{ message }}</p>
+    <a href="/">{% trans "Go Home" %}</a>
+</div>
+{% endblock %}

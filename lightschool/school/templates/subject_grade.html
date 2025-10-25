@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="subject-grade">
+    <h1>{% trans "Units" %}</h1>
+    <div class="units">
+        {% for unit in units %}
+        <div class="unit-card" onclick="goToLesson('{{ unit.id }}')">
+            <h3>{{ unit.title }}</h3>
+            <div class="progress">
+                {% if unit.progress.status == 'completed' %}
+                    <span class="star">⭐</span>
+                    {% if unit.progress.score %}
+                        <span>{{ unit.progress.score }}%</span>
+                    {% endif %}
+                {% elif unit.progress.status == 'in_progress' %}
+                    <span>{% trans "In Progress" %}</span>
+                {% else %}
+                    <span>{% trans "Not Started" %}</span>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<script>
+function goToLesson(unitId) {
+    window.location.href = `/lesson/{{ subject }}/{{ grade }}/${unitId}/`;
+}
+</script>
+{% endblock %}

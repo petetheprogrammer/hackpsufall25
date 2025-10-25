@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lightschool"
+version = "1.0.0"
+description = "Offline K-5 Learning PWA"
+authors = [{name = "Peter Nguyen"}]
+dependencies = [
+    "django>=5.0,<6.0",
+    "requests",  # for Ollama API
+]
+requires-python = ">=3.10"
+
+[tool.django]
+settings_module = "lightschool.settings"
+
+[tool.setuptools]
+packages = ["lightschool", "school"]

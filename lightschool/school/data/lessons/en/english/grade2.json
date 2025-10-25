@@ -1,0 +1,55 @@
+{
+  "subject": "english",
+  "grade": 2,
+  "locale": "en",
+  "units": [
+    {
+      "id": "adjectives",
+      "title": "Adjectives",
+      "cards": [
+        {"type": "text", "title": "What are adjectives?", "body": "Adjectives describe nouns."},
+        {"type": "example", "body": "Big cat, red apple"},
+        {"type": "text", "title": "Examples", "body": "Size: small, color: blue, shape: round"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"Which is an adjective?","options":["Run","Big","Jump"],"answerIndex":1,"explanation":"Big describes size."},
+        {"id":"q2","prompt":"Which is an adjective?","options":["Eat","Red","Sleep"],"answerIndex":1,"explanation":"Red describes color."},
+        {"id":"q3","prompt":"Which is an adjective?","options":["Book","Tall","Read"],"answerIndex":1,"explanation":"Tall describes height."},
+        {"id":"q4","prompt":"Which is an adjective?","options":["Teacher","Round","Teach"],"answerIndex":1,"explanation":"Round describes shape."},
+        {"id":"q5","prompt":"Which is an adjective?","options":["Park","Happy","Play"],"answerIndex":1,"explanation":"Happy describes feeling."}
+      ]
+    },
+    {
+      "id": "adverbs",
+      "title": "Adverbs",
+      "cards": [
+        {"type": "text", "title": "What are adverbs?", "body": "Adverbs describe verbs, adjectives, or other adverbs."},
+        {"type": "example", "body": "Run quickly, very big"},
+        {"type": "text", "title": "Examples", "body": "How: fast, when: now, where: here"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"Which is an adverb?","options":["Cat","Quickly","Big"],"answerIndex":1,"explanation":"Quickly describes how."},
+        {"id":"q2","prompt":"Which is an adverb?","options":["School","Slowly","Red"],"answerIndex":1,"explanation":"Slowly describes how."},
+        {"id":"q3","prompt":"Which is an adverb?","options":["Book","Here","Tall"],"answerIndex":1,"explanation":"Here describes where."},
+        {"id":"q4","prompt":"Which is an adverb?","options":["Teacher","Now","Round"],"answerIndex":1,"explanation":"Now describes when."},
+        {"id":"q5","prompt":"Which is an adverb?","options":["Park","Very","Happy"],"answerIndex":1,"explanation":"Very describes degree."}
+      ]
+    },
+    {
+      "id": "compound_sentences",
+      "title": "Compound Sentences",
+      "cards": [
+        {"type": "text", "title": "What are compound sentences?", "body": "Two simple sentences joined by 'and', 'or', 'but'."},
+        {"type": "example", "body": "I like cats and I like dogs."},
+        {"type": "text", "title": "Conjunctions", "body": "And, or, but connect ideas."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"Which is a compound sentence?","options":["I like cats.","I like cats and dogs.","Cats like."],"answerIndex":1,"explanation":"It joins two ideas with 'and'."},
+        {"id":"q2","prompt":"Which is a compound sentence?","options":["She runs.","She runs or walks.","Runs she."],"answerIndex":1,"explanation":"It joins two ideas with 'or'."},
+        {"id":"q3","prompt":"Which is a compound sentence?","options":["He is tall.","He is tall but thin.","Tall he."],"answerIndex":1,"explanation":"It joins two ideas with 'but'."},
+        {"id":"q4","prompt":"Which is a compound sentence?","options":["They play.","They play and sing.","Play they."],"answerIndex":1,"explanation":"It joins two ideas with 'and'."},
+        {"id":"q5","prompt":"Which is a compound sentence?","options":["We eat.","We eat or drink.","Eat we."],"answerIndex":1,"explanation":"It joins two ideas with 'or'."}
+      ]
+    }
+  ]
+}

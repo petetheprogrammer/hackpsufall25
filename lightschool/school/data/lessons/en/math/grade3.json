@@ -1,0 +1,55 @@
+{
+  "subject": "math",
+  "grade": 3,
+  "locale": "en",
+  "units": [
+    {
+      "id": "multiplication",
+      "title": "Multiplication",
+      "cards": [
+        {"type": "text", "title": "Multiplying numbers", "body": "Multiplication is adding the same number many times."},
+        {"type": "example", "body": "4 × 5 = 20"},
+        {"type": "text", "title": "Practice", "body": "Memorize your times tables."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"What is 6 × 7?","options":["40","41","42"],"answerIndex":2,"explanation":"6 × 7 = 42."},
+        {"id":"q2","prompt":"What is 8 × 9?","options":["70","71","72"],"answerIndex":2,"explanation":"8 × 9 = 72."},
+        {"id":"q3","prompt":"What is 5 × 9?","options":["44","45","46"],"answerIndex":1,"explanation":"5 × 9 = 45."},
+        {"id":"q4","prompt":"What is 7 × 8?","options":["54","55","56"],"answerIndex":2,"explanation":"7 × 8 = 56."},
+        {"id":"q5","prompt":"What is 9 × 6?","options":["53","54","55"],"answerIndex":1,"explanation":"9 × 6 = 54."}
+      ]
+    },
+    {
+      "id": "division_intro",
+      "title": "Introduction to Division",
+      "cards": [
+        {"type": "text", "title": "What is division?", "body": "Division is splitting into equal parts."},
+        {"type": "example", "body": "12 ÷ 3 = 4"},
+        {"type": "text", "title": "Remainders", "body": "Sometimes there is a remainder."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"What is 15 ÷ 3?","options":["4","5","6"],"answerIndex":1,"explanation":"15 ÷ 3 = 5."},
+        {"id":"q2","prompt":"What is 20 ÷ 4?","options":["4","5","6"],"answerIndex":1,"explanation":"20 ÷ 4 = 5."},
+        {"id":"q3","prompt":"What is 18 ÷ 2?","options":["8","9","10"],"answerIndex":1,"explanation":"18 ÷ 2 = 9."},
+        {"id":"q4","prompt":"What is 25 ÷ 5?","options":["4","5","6"],"answerIndex":1,"explanation":"25 ÷ 5 = 5."},
+        {"id":"q5","prompt":"What is 14 ÷ 2?","options":["6","7","8"],"answerIndex":1,"explanation":"14 ÷ 2 = 7."}
+      ]
+    },
+    {
+      "id": "fractions",
+      "title": "Basic Fractions",
+      "cards": [
+        {"type": "text", "title": "What are fractions?", "body": "Fractions represent parts of a whole."},
+        {"type": "example", "body": "1/2 means half"},
+        {"type": "text", "title": "Examples", "body": "1/4 is a quarter."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"What is 1/2 of 10?","options":["4","5","6"],"answerIndex":1,"explanation":"Half of 10 is 5."},
+        {"id":"q2","prompt":"What is 1/4 of 8?","options":["1","2","3"],"answerIndex":1,"explanation":"Quarter of 8 is 2."},
+        {"id":"q3","prompt":"What fraction is half?","options":["1/2","1/3","1/4"],"answerIndex":0,"explanation":"Half is 1/2."},
+        {"id":"q4","prompt":"What is 3/4 of 12?","options":["8","9","10"],"answerIndex":1,"explanation":"3/4 of 12 is 9."},
+        {"id":"q5","prompt":"What fraction is a quarter?","options":["1/2","1/3","1/4"],"answerIndex":2,"explanation":"A quarter is 1/4."}
+      ]
+    }
+  ]
+}

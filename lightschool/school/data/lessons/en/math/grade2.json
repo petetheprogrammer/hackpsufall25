@@ -1,0 +1,55 @@
+{
+  "subject": "math",
+  "grade": 2,
+  "locale": "en",
+  "units": [
+    {
+      "id": "add_two_digit",
+      "title": "Adding Two-Digit Numbers",
+      "cards": [
+        {"type": "text", "title": "Adding bigger numbers", "body": "We can add numbers with two digits!"},
+        {"type": "example", "body": "12 + 23 = 35"},
+        {"type": "text", "title": "Carry over", "body": "If the sum is 10 or more, carry the 1 to the next place."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"What is 12 + 13?","options":["24","25","26"],"answerIndex":1,"explanation":"12 + 13 = 25."},
+        {"id":"q2","prompt":"What is 25 + 30?","options":["50","55","60"],"answerIndex":1,"explanation":"25 + 30 = 55."},
+        {"id":"q3","prompt":"What is 18 + 22?","options":["38","40","42"],"answerIndex":1,"explanation":"18 + 22 = 40."},
+        {"id":"q4","prompt":"What is 33 + 17?","options":["48","50","52"],"answerIndex":1,"explanation":"33 + 17 = 50."},
+        {"id":"q5","prompt":"What is 29 + 41?","options":["68","70","72"],"answerIndex":1,"explanation":"29 + 41 = 70."}
+      ]
+    },
+    {
+      "id": "sub_two_digit",
+      "title": "Subtracting Two-Digit Numbers",
+      "cards": [
+        {"type": "text", "title": "Subtracting bigger numbers", "body": "Subtracting two-digit numbers."},
+        {"type": "example", "body": "35 - 12 = 23"},
+        {"type": "text", "title": "Borrowing", "body": "If you need to borrow, take 1 from the next place."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"What is 35 - 12?","options":["22","23","24"],"answerIndex":1,"explanation":"35 - 12 = 23."},
+        {"id":"q2","prompt":"What is 50 - 25?","options":["24","25","26"],"answerIndex":1,"explanation":"50 - 25 = 25."},
+        {"id":"q3","prompt":"What is 42 - 18?","options":["22","24","26"],"answerIndex":1,"explanation":"42 - 18 = 24."},
+        {"id":"q4","prompt":"What is 60 - 33?","options":["26","27","28"],"answerIndex":1,"explanation":"60 - 33 = 27."},
+        {"id":"q5","prompt":"What is 48 - 19?","options":["28","29","30"],"answerIndex":1,"explanation":"48 - 19 = 29."}
+      ]
+    },
+    {
+      "id": "multiplication_intro",
+      "title": "Introduction to Multiplication",
+      "cards": [
+        {"type": "text", "title": "What is multiplication?", "body": "Multiplication is repeated addition."},
+        {"type": "example", "body": "2 × 3 = 6 (which is 2 + 2 + 2)"},
+        {"type": "text", "title": "Times tables", "body": "Learn your times tables!"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"What is 2 × 3?","options":["5","6","7"],"answerIndex":1,"explanation":"2 × 3 = 6."},
+        {"id":"q2","prompt":"What is 3 × 4?","options":["10","11","12"],"answerIndex":2,"explanation":"3 × 4 = 12."},
+        {"id":"q3","prompt":"What is 5 × 2?","options":["7","9","10"],"answerIndex":2,"explanation":"5 × 2 = 10."},
+        {"id":"q4","prompt":"What is 1 × 8?","options":["7","8","9"],"answerIndex":1,"explanation":"1 × 8 = 8."},
+        {"id":"q5","prompt":"What is 4 × 2?","options":["6","7","8"],"answerIndex":2,"explanation":"4 × 2 = 8."}
+      ]
+    }
+  ]
+}

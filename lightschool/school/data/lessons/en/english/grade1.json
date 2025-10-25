@@ -1,0 +1,55 @@
+{
+  "subject": "english",
+  "grade": 1,
+  "locale": "en",
+  "units": [
+    {
+      "id": "nouns",
+      "title": "Nouns",
+      "cards": [
+        {"type": "text", "title": "What are nouns?", "body": "Nouns are names of people, places, things, or ideas."},
+        {"type": "example", "body": "Cat, school, book"},
+        {"type": "text", "title": "Examples", "body": "Person: teacher, Place: park, Thing: apple"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"Which is a noun?","options":["Run","Cat","Jump"],"answerIndex":1,"explanation":"Cat is a thing, a noun."},
+        {"id":"q2","prompt":"Which is a noun?","options":["Big","School","Quick"],"answerIndex":1,"explanation":"School is a place, a noun."},
+        {"id":"q3","prompt":"Which is a noun?","options":["Eat","Book","Fast"],"answerIndex":1,"explanation":"Book is a thing, a noun."},
+        {"id":"q4","prompt":"Which is a noun?","options":["Happy","Teacher","Slow"],"answerIndex":1,"explanation":"Teacher is a person, a noun."},
+        {"id":"q5","prompt":"Which is a noun?","options":["Play","Park","Sing"],"answerIndex":1,"explanation":"Park is a place, a noun."}
+      ]
+    },
+    {
+      "id": "verbs",
+      "title": "Verbs",
+      "cards": [
+        {"type": "text", "title": "What are verbs?", "body": "Verbs are action words or state of being."},
+        {"type": "example", "body": "Run, eat, is"},
+        {"type": "text", "title": "Examples", "body": "Action: jump, think, sleep"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"Which is a verb?","options":["Cat","Run","Big"],"answerIndex":1,"explanation":"Run is an action, a verb."},
+        {"id":"q2","prompt":"Which is a verb?","options":["School","Eat","Red"],"answerIndex":1,"explanation":"Eat is an action, a verb."},
+        {"id":"q3","prompt":"Which is a verb?","options":["Book","Jump","Tall"],"answerIndex":1,"explanation":"Jump is an action, a verb."},
+        {"id":"q4","prompt":"Which is a verb?","options":["Teacher","Is","Small"],"answerIndex":1,"explanation":"Is shows state, a verb."},
+        {"id":"q5","prompt":"Which is a verb?","options":["Park","Sleep","Blue"],"answerIndex":1,"explanation":"Sleep is an action, a verb."}
+      ]
+    },
+    {
+      "id": "simple_sentences",
+      "title": "Simple Sentences",
+      "cards": [
+        {"type": "text", "title": "What are sentences?", "body": "Sentences are groups of words that make sense."},
+        {"type": "example", "body": "The cat runs."},
+        {"type": "text", "title": "Structure", "body": "Subject + verb + object"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"Which is a sentence?","options":["Cat run","The cat runs.","Runs cat"],"answerIndex":1,"explanation":"'The cat runs.' is a complete sentence."},
+        {"id":"q2","prompt":"Which is a sentence?","options":["Book red","I read the book.","Read I book"],"answerIndex":1,"explanation":"'I read the book.' is a complete sentence."},
+        {"id":"q3","prompt":"Which is a sentence?","options":["Dog big","The dog is big.","Big dog is"],"answerIndex":1,"explanation":"'The dog is big.' is a complete sentence."},
+        {"id":"q4","prompt":"Which is a sentence?","options":["Eat apple","She eats an apple.","Apple eats she"],"answerIndex":1,"explanation":"'She eats an apple.' is a complete sentence."},
+        {"id":"q5","prompt":"Which is a sentence?","options":["Play ball","They play ball.","Ball play they"],"answerIndex":1,"explanation":"'They play ball.' is a complete sentence."}
+      ]
+    }
+  ]
+}

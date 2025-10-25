@@ -1,0 +1,55 @@
+{
+  "subject": "math",
+  "grade": 2,
+  "locale": "es",
+  "units": [
+    {
+      "id": "add_two_digit",
+      "title": "Sumar Números de Dos Dígitos",
+      "cards": [
+        {"type": "text", "title": "Sumar números más grandes", "body": "¡Podemos sumar números con dos dígitos!"},
+        {"type": "example", "body": "12 + 23 = 35"},
+        {"type": "text", "title": "Llevar", "body": "Si la suma es 10 o más, lleva el 1 al siguiente lugar."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuánto es 12 + 13?","options":["24","25","26"],"answerIndex":1,"explanation":"12 + 13 = 25."},
+        {"id":"q2","prompt":"¿Cuánto es 25 + 30?","options":["50","55","60"],"answerIndex":1,"explanation":"25 + 30 = 55."},
+        {"id":"q3","prompt":"¿Cuánto es 18 + 22?","options":["38","40","42"],"answerIndex":1,"explanation":"18 + 22 = 40."},
+        {"id":"q4","prompt":"¿Cuánto es 33 + 17?","options":["48","50","52"],"answerIndex":1,"explanation":"33 + 17 = 50."},
+        {"id":"q5","prompt":"¿Cuánto es 29 + 41?","options":["68","70","72"],"answerIndex":1,"explanation":"29 + 41 = 70."}
+      ]
+    },
+    {
+      "id": "sub_two_digit",
+      "title": "Restar Números de Dos Dígitos",
+      "cards": [
+        {"type": "text", "title": "Restar números más grandes", "body": "Restar números de dos dígitos."},
+        {"type": "example", "body": "35 - 12 = 23"},
+        {"type": "text", "title": "Prestar", "body": "Si necesitas, toma 1 del siguiente lugar."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuánto es 35 - 12?","options":["22","23","24"],"answerIndex":1,"explanation":"35 - 12 = 23."},
+        {"id":"q2","prompt":"¿Cuánto es 50 - 25?","options":["24","25","26"],"answerIndex":1,"explanation":"50 - 25 = 25."},
+        {"id":"q3","prompt":"¿Cuánto es 42 - 18?","options":["22","24","26"],"answerIndex":1,"explanation":"42 - 18 = 24."},
+        {"id":"q4","prompt":"¿Cuánto es 60 - 33?","options":["26","27","28"],"answerIndex":1,"explanation":"60 - 33 = 27."},
+        {"id":"q5","prompt":"¿Cuánto es 48 - 19?","options":["28","29","30"],"answerIndex":1,"explanation":"48 - 19 = 29."}
+      ]
+    },
+    {
+      "id": "multiplication_intro",
+      "title": "Introducción a la Multiplicación",
+      "cards": [
+        {"type": "text", "title": "¿Qué es la multiplicación?", "body": "La multiplicación es suma repetida."},
+        {"type": "example", "body": "2 × 3 = 6 (que es 2 + 2 + 2)"},
+        {"type": "text", "title": "Tablas de multiplicar", "body": "¡Aprende tus tablas de multiplicar!"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuánto es 2 × 3?","options":["5","6","7"],"answerIndex":1,"explanation":"2 × 3 = 6."},
+        {"id":"q2","prompt":"¿Cuánto es 3 × 4?","options":["10","11","12"],"answerIndex":2,"explanation":"3 × 4 = 12."},
+        {"id":"q3","prompt":"¿Cuánto es 5 × 2?","options":["7","9","10"],"answerIndex":2,"explanation":"5 × 2 = 10."},
+        {"id":"q4","prompt":"¿Cuánto es 1 × 8?","options":["7","8","9"],"answerIndex":1,"explanation":"1 × 8 = 8."},
+        {"id":"q5","prompt":"¿Cuánto es 4 × 2?","options":["6","7","8"],"answerIndex":2,"explanation":"4 × 2 = 8."}
+      ]
+    }
+  ]
+}

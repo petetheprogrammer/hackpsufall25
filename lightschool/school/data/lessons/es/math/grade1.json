@@ -1,0 +1,55 @@
+{
+  "subject": "math",
+  "grade": 1,
+  "locale": "es",
+  "units": [
+    {
+      "id": "add_basics",
+      "title": "Conceptos Básicos de Suma",
+      "cards": [
+        {"type": "text", "title": "¿Qué es la suma?", "body": "¡Sumar significa juntar cosas!"},
+        {"type": "image", "src": "/static/img/apples_2_plus_3.png", "caption": "2 manzanas + 3 manzanas"},
+        {"type": "example", "body": "2 + 3 = 5"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuánto es 2 + 3?","options":["4","5","6"],"answerIndex":1,"explanation":"Dos más tres es igual a cinco."},
+        {"id":"q2","prompt":"¿Cuánto es 1 + 1?","options":["1","2","3"],"answerIndex":1,"explanation":"Uno más uno es igual a dos."},
+        {"id":"q3","prompt":"¿Cuánto es 3 + 2?","options":["4","5","6"],"answerIndex":1,"explanation":"Tres más dos es igual a cinco."},
+        {"id":"q4","prompt":"¿Cuánto es 0 + 4?","options":["0","4","5"],"answerIndex":1,"explanation":"Cero más cuatro es igual a cuatro."},
+        {"id":"q5","prompt":"¿Cuánto es 2 + 1?","options":["2","3","4"],"answerIndex":1,"explanation":"Dos más uno es igual a tres."}
+      ]
+    },
+    {
+      "id": "sub_basics",
+      "title": "Conceptos Básicos de Resta",
+      "cards": [
+        {"type": "text", "title": "¿Qué es la resta?", "body": "¡Restar significa quitar!"},
+        {"type": "image", "src": "/static/img/apples_5_minus_2.png", "caption": "5 manzanas menos 2 manzanas"},
+        {"type": "example", "body": "5 - 2 = 3"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuánto es 5 - 2?","options":["2","3","4"],"answerIndex":1,"explanation":"Cinco menos dos es igual a tres."},
+        {"id":"q2","prompt":"¿Cuánto es 3 - 1?","options":["1","2","3"],"answerIndex":1,"explanation":"Tres menos uno es igual a dos."},
+        {"id":"q3","prompt":"¿Cuánto es 4 - 2?","options":["1","2","3"],"answerIndex":1,"explanation":"Cuatro menos dos es igual a dos."},
+        {"id":"q4","prompt":"¿Cuánto es 6 - 3?","options":["2","3","4"],"answerIndex":1,"explanation":"Seis menos tres es igual a tres."},
+        {"id":"q5","prompt":"¿Cuánto es 2 - 0?","options":["0","2","3"],"answerIndex":1,"explanation":"Dos menos cero es igual a dos."}
+      ]
+    },
+    {
+      "id": "shapes",
+      "title": "Formas Básicas",
+      "cards": [
+        {"type": "text", "title": "¿Qué son las formas?", "body": "Las formas son la apariencia de las cosas a nuestro alrededor."},
+        {"type": "image", "src": "/static/img/circle.png", "caption": "Un círculo"},
+        {"type": "text", "title": "Cuadrado", "body": "Un cuadrado tiene cuatro lados iguales."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuántos lados tiene un cuadrado?","options":["3","4","5"],"answerIndex":1,"explanation":"Un cuadrado tiene cuatro lados."},
+        {"id":"q2","prompt":"¿Qué forma tiene una pelota?","options":["Cuadrado","Círculo","Triángulo"],"answerIndex":1,"explanation":"Una pelota es un círculo."},
+        {"id":"q3","prompt":"¿Cuántos lados tiene un triángulo?","options":["2","3","4"],"answerIndex":1,"explanation":"Un triángulo tiene tres lados."},
+        {"id":"q4","prompt":"¿Qué forma no tiene lados?","options":["Cuadrado","Círculo","Ninguna"],"answerIndex":1,"explanation":"Un círculo no tiene lados."},
+        {"id":"q5","prompt":"¿Cuántos lados tiene un rectángulo?","options":["3","4","5"],"answerIndex":1,"explanation":"Un rectángulo tiene cuatro lados."}
+      ]
+    }
+  ]
+}

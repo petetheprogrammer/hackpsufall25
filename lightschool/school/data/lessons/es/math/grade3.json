@@ -1,0 +1,55 @@
+{
+  "subject": "math",
+  "grade": 3,
+  "locale": "es",
+  "units": [
+    {
+      "id": "multiplication",
+      "title": "Multiplicación",
+      "cards": [
+        {"type": "text", "title": "Multiplicar números", "body": "La multiplicación es sumar el mismo número muchas veces."},
+        {"type": "example", "body": "4 × 5 = 20"},
+        {"type": "text", "title": "Práctica", "body": "Memoriza tus tablas de multiplicar."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuánto es 6 × 7?","options":["40","41","42"],"answerIndex":2,"explanation":"6 × 7 = 42."},
+        {"id":"q2","prompt":"¿Cuánto es 8 × 9?","options":["70","71","72"],"answerIndex":2,"explanation":"8 × 9 = 72."},
+        {"id":"q3","prompt":"¿Cuánto es 5 × 9?","options":["44","45","46"],"answerIndex":1,"explanation":"5 × 9 = 45."},
+        {"id":"q4","prompt":"¿Cuánto es 7 × 8?","options":["54","55","56"],"answerIndex":2,"explanation":"7 × 8 = 56."},
+        {"id":"q5","prompt":"¿Cuánto es 9 × 6?","options":["53","54","55"],"answerIndex":1,"explanation":"9 × 6 = 54."}
+      ]
+    },
+    {
+      "id": "division_intro",
+      "title": "Introducción a la División",
+      "cards": [
+        {"type": "text", "title": "¿Qué es la división?", "body": "La división es dividir en partes iguales."},
+        {"type": "example", "body": "12 ÷ 3 = 4"},
+        {"type": "text", "title": "Restos", "body": "A veces hay un resto."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuánto es 15 ÷ 3?","options":["4","5","6"],"answerIndex":1,"explanation":"15 ÷ 3 = 5."},
+        {"id":"q2","prompt":"¿Cuánto es 20 ÷ 4?","options":["4","5","6"],"answerIndex":1,"explanation":"20 ÷ 4 = 5."},
+        {"id":"q3","prompt":"¿Cuánto es 18 ÷ 2?","options":["8","9","10"],"answerIndex":1,"explanation":"18 ÷ 2 = 9."},
+        {"id":"q4","prompt":"¿Cuánto es 25 ÷ 5?","options":["4","5","6"],"answerIndex":1,"explanation":"25 ÷ 5 = 5."},
+        {"id":"q5","prompt":"¿Cuánto es 14 ÷ 2?","options":["6","7","8"],"answerIndex":1,"explanation":"14 ÷ 2 = 7."}
+      ]
+    },
+    {
+      "id": "fractions",
+      "title": "Fracciones Básicas",
+      "cards": [
+        {"type": "text", "title": "¿Qué son las fracciones?", "body": "Las fracciones representan partes de un todo."},
+        {"type": "example", "body": "1/2 significa la mitad"},
+        {"type": "text", "title": "Ejemplos", "body": "1/4 es un cuarto."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuánto es 1/2 de 10?","options":["4","5","6"],"answerIndex":1,"explanation":"La mitad de 10 es 5."},
+        {"id":"q2","prompt":"¿Cuánto es 1/4 de 8?","options":["1","2","3"],"answerIndex":1,"explanation":"Un cuarto de 8 es 2."},
+        {"id":"q3","prompt":"¿Qué fracción es la mitad?","options":["1/2","1/3","1/4"],"answerIndex":0,"explanation":"La mitad es 1/2."},
+        {"id":"q4","prompt":"¿Cuánto es 3/4 de 12?","options":["8","9","10"],"answerIndex":1,"explanation":"3/4 de 12 es 9."},
+        {"id":"q5","prompt":"¿Qué fracción es un cuarto?","options":["1/2","1/3","1/4"],"answerIndex":2,"explanation":"Un cuarto es 1/4."}
+      ]
+    }
+  ]
+}

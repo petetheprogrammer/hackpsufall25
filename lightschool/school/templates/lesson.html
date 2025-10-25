@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="lesson">
+    <h1>{{ unit.title }}</h1>
+    <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+    </div>
+    <div id="card-container" class="card-container">
+        <!-- Cards will be loaded here -->
+    </div>
+    <div class="lesson-controls">
+        <button id="prev-btn" onclick="prevCard()">{% trans "Previous" %}</button>
+        <button id="next-btn" onclick="nextCard()">{% trans "Next" %}</button>
+        <button id="quiz-btn" onclick="goToQuiz()" style="display:none;">{% trans "Take Quiz" %}</button>
+    </div>
+</div>
+<script src="/static/js/lesson.js"></script>
+<script>
+const unit = {{ unit|safe }};
+initLesson(unit);
+</script>
+{% endblock %}

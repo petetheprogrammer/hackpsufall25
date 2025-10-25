@@ -1,0 +1,55 @@
+{
+  "subject": "english",
+  "grade": 3,
+  "locale": "es",
+  "units": [
+    {
+      "id": "pronouns",
+      "title": "Pronombres",
+      "cards": [
+        {"type": "text", "title": "¿Qué son los pronombres?", "body": "Los pronombres reemplazan sustantivos."},
+        {"type": "example", "body": "Él, ella, eso, ellos"},
+        {"type": "text", "title": "Ejemplos", "body": "Yo, tú, nosotros, me, nos"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuál es un pronombre?","options":["Gato","Él","Correr"],"answerIndex":1,"explanation":"Él reemplaza un sustantivo."},
+        {"id":"q2","prompt":"¿Cuál es un pronombre?","options":["Escuela","Ella","Grande"],"answerIndex":1,"explanation":"Ella reemplaza un sustantivo."},
+        {"id":"q3","prompt":"¿Cuál es un pronombre?","options":["Libro","Eso","Leer"],"answerIndex":1,"explanation":"Eso reemplaza un sustantivo."},
+        {"id":"q4","prompt":"¿Cuál es un pronombre?","options":["Maestro","Ellos","Enseñar"],"answerIndex":1,"explanation":"Ellos reemplaza un sustantivo."},
+        {"id":"q5","prompt":"¿Cuál es un pronombre?","options":["Parque","Nosotros","Jugar"],"answerIndex":1,"explanation":"Nosotros reemplaza un sustantivo."}
+      ]
+    },
+    {
+      "id": "prepositions",
+      "title": "Preposiciones",
+      "cards": [
+        {"type": "text", "title": "¿Qué son las preposiciones?", "body": "Las preposiciones muestran relaciones."},
+        {"type": "example", "body": "En, sobre, a, bajo"},
+        {"type": "text", "title": "Ejemplos", "body": "Lugar: arriba, Tiempo: antes"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuál es una preposición?","options":["Gato","En","Correr"],"answerIndex":1,"explanation":"En muestra lugar."},
+        {"id":"q2","prompt":"¿Cuál es una preposición?","options":["Escuela","Sobre","Grande"],"answerIndex":1,"explanation":"Sobre muestra lugar."},
+        {"id":"q3","prompt":"¿Cuál es una preposición?","options":["Libro","A","Leer"],"answerIndex":1,"explanation":"A muestra lugar o tiempo."},
+        {"id":"q4","prompt":"¿Cuál es una preposición?","options":["Maestro","Bajo","Enseñar"],"answerIndex":1,"explanation":"Bajo muestra lugar."},
+        {"id":"q5","prompt":"¿Cuál es una preposición?","options":["Parque","Antes","Jugar"],"answerIndex":1,"explanation":"Antes muestra tiempo."}
+      ]
+    },
+    {
+      "id": "complex_sentences",
+      "title": "Oraciones Complejas",
+      "cards": [
+        {"type": "text", "title": "¿Qué son las oraciones complejas?", "body": "Una cláusula principal y una o más cláusulas dependientes."},
+        {"type": "example", "body": "Como tengo hambre."},
+        {"type": "text", "title": "Conectores", "body": "Porque, cuando, si, aunque"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"¿Cuál es una oración compleja?","options":["Como.","Como porque tengo hambre.","Como."],"answerIndex":1,"explanation":"Tiene una cláusula principal y dependiente."},
+        {"id":"q2","prompt":"¿Cuál es una oración compleja?","options":["Ella corre.","Ella corre cuando llueve.","Corre ella."],"answerIndex":1,"explanation":"Tiene una cláusula principal y dependiente."},
+        {"id":"q3","prompt":"¿Cuál es una oración compleja?","options":["Él es alto.","Él es alto aunque es joven.","Alto él."],"answerIndex":1,"explanation":"Tiene una cláusula principal y dependiente."},
+        {"id":"q4","prompt":"¿Cuál es una oración compleja?","options":["Ellos juegan.","Ellos juegan si hace sol.","Juegan ellos."],"answerIndex":1,"explanation":"Tiene una cláusula principal y dependiente."},
+        {"id":"q5","prompt":"¿Cuál es una oración compleja?","options":["Dormimos.","Dormimos cuando es de noche.","Dormimos."],"answerIndex":1,"explanation":"Tiene una cláusula principal y dependiente."}
+      ]
+    }
+  ]
+}

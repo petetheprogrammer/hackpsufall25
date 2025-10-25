@@ -1,0 +1,55 @@
+{
+  "subject": "math",
+  "grade": 1,
+  "locale": "en",
+  "units": [
+    {
+      "id": "add_basics",
+      "title": "Addition Basics",
+      "cards": [
+        {"type": "text", "title": "What is addition?", "body": "Adding means putting things together!"},
+        {"type": "image", "src": "/static/img/apples_2_plus_3.png", "caption": "2 apples + 3 apples"},
+        {"type": "example", "body": "2 + 3 = 5"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"What is 2 + 3?","options":["4","5","6"],"answerIndex":1,"explanation":"Two plus three equals five."},
+        {"id":"q2","prompt":"What is 1 + 1?","options":["1","2","3"],"answerIndex":1,"explanation":"One plus one equals two."},
+        {"id":"q3","prompt":"What is 3 + 2?","options":["4","5","6"],"answerIndex":1,"explanation":"Three plus two equals five."},
+        {"id":"q4","prompt":"What is 0 + 4?","options":["0","4","5"],"answerIndex":1,"explanation":"Zero plus four equals four."},
+        {"id":"q5","prompt":"What is 2 + 1?","options":["2","3","4"],"answerIndex":1,"explanation":"Two plus one equals three."}
+      ]
+    },
+    {
+      "id": "sub_basics",
+      "title": "Subtraction Basics",
+      "cards": [
+        {"type": "text", "title": "What is subtraction?", "body": "Subtraction means taking away!"},
+        {"type": "image", "src": "/static/img/apples_5_minus_2.png", "caption": "5 apples minus 2 apples"},
+        {"type": "example", "body": "5 - 2 = 3"}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"What is 5 - 2?","options":["2","3","4"],"answerIndex":1,"explanation":"Five minus two equals three."},
+        {"id":"q2","prompt":"What is 3 - 1?","options":["1","2","3"],"answerIndex":1,"explanation":"Three minus one equals two."},
+        {"id":"q3","prompt":"What is 4 - 2?","options":["1","2","3"],"answerIndex":1,"explanation":"Four minus two equals two."},
+        {"id":"q4","prompt":"What is 6 - 3?","options":["2","3","4"],"answerIndex":1,"explanation":"Six minus three equals three."},
+        {"id":"q5","prompt":"What is 2 - 0?","options":["0","2","3"],"answerIndex":1,"explanation":"Two minus zero equals two."}
+      ]
+    },
+    {
+      "id": "shapes",
+      "title": "Basic Shapes",
+      "cards": [
+        {"type": "text", "title": "What are shapes?", "body": "Shapes are the form of things around us."},
+        {"type": "image", "src": "/static/img/circle.png", "caption": "A circle"},
+        {"type": "text", "title": "Square", "body": "A square has four equal sides."}
+      ],
+      "quiz": [
+        {"id":"q1","prompt":"How many sides does a square have?","options":["3","4","5"],"answerIndex":1,"explanation":"A square has four sides."},
+        {"id":"q2","prompt":"What shape is a ball?","options":["Square","Circle","Triangle"],"answerIndex":1,"explanation":"A ball is a circle."},
+        {"id":"q3","prompt":"How many sides does a triangle have?","options":["2","3","4"],"answerIndex":1,"explanation":"A triangle has three sides."},
+        {"id":"q4","prompt":"What shape has no sides?","options":["Square","Circle","None"],"answerIndex":1,"explanation":"A circle has no sides."},
+        {"id":"q5","prompt":"How many sides does a rectangle have?","options":["3","4","5"],"answerIndex":1,"explanation":"A rectangle has four sides."}
+      ]
+    }
+  ]
+}
