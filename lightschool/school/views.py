@@ -100,8 +100,20 @@ def api_progress_get(request):
 @csrf_exempt
 def api_tutor(request):
     """Get tutor reply."""
-    if request.method != 'POST':
-        return JsonResponse({'error': 'Method not allowed'}, status=405)
-    data = json.loads(request.body)
-    reply = get_tutor_reply(data['message'], data['subject'], data['grade'], data['locale'])
-    return JsonResponse(reply)
+    try:
+        if request.method != 'POST':
+            return JsonResponse({'error': 'Method not allowed'}, status=405)
+        print("=== API Tutor Request ===")
+        print(f"Request body: {request.body.decode()}")
+        data = json.loads(request.body)
+        print(f"Parsed data: {data}")
+        reply = get_tutor_reply(data['message'], data['subject'], data['grade'], data['locale'])
+        print(f"Got reply: {reply}")
+        return JsonResponse(reply)
+    except Exception as e:
+        import traceback
+        print("=== Error in api_tutor ===")
+        print(f"Error: {str(e)}")
+        print("Traceback:")
+        print(traceback.format_exc())
+        return JsonResponse({'error': str(e)}, status=500)

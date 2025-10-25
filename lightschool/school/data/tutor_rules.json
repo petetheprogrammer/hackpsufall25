@@ -1,16 +1,34 @@
 {
   "en": {
     "math:addition": [
-      "Adding means putting groups together. Try 2 apples + 3 apples = 5."
+      "Adding means putting groups together. Try 2 apples + 3 apples = 5.",
+      "Use your fingers to count up! Start with the bigger number and add the smaller one.",
+      "Think of addition like collecting toys - if you have 4 and get 2 more, count them all!"
     ],
     "math:subtraction": [
-      "Subtracting means taking away. Try 5 apples - 2 apples = 3."
+      "Subtracting means taking away. Try 5 apples - 2 apples = 3.",
+      "Count backwards using your fingers - it's like walking down stairs!",
+      "Imagine you have cookies and share some - how many are left?"
     ],
     "math:multiplication": [
-      "Multiplication is repeated addition. 2 times 3 is 2+2+2=6."
+      "Multiplication is repeated addition. 2 times 3 is 2+2+2=6.",
+      "Think of multiplication as making equal groups. 3×4 is 3 groups of 4!",
+      "Draw circles and fill each with the same number of dots to see multiplication!"
     ],
     "math:division": [
-      "Division splits into equal parts. 6 divided by 2 is 3."
+      "Division splits into equal parts. 6 divided by 2 is 3.",
+      "Think of sharing toys equally with friends - everyone gets the same amount!",
+      "Draw a circle around each equal group to see division in action."
+    ],
+    "math:help": [
+      "Let's break this down into smaller steps!",
+      "Try drawing pictures to help you see the numbers.",
+      "Use objects like blocks or coins to count with!"
+    ],
+    "math:explain": [
+      "Let me show you with a simple example.",
+      "Think of it like a story problem - if you have 3 candies and get 2 more...",
+      "We can solve this step by step together!"
     ],
     "english:nouns": [
       "A noun is a person, place, or thing. Example: cat, school, book."
@@ -24,16 +42,34 @@
   },
   "es": {
     "math:addition": [
-      "Sumar significa juntar grupos. Prueba 2 manzanas + 3 manzanas = 5."
+      "Sumar significa juntar grupos. Prueba 2 manzanas + 3 manzanas = 5.",
+      "¡Usa tus dedos para contar! Empieza con el número más grande y suma el más pequeño.",
+      "Piensa en la suma como coleccionar juguetes - ¡si tienes 4 y recibes 2 más, cuéntalos todos!"
     ],
     "math:subtraction": [
-      "Restar significa quitar. Prueba 5 manzanas - 2 manzanas = 3."
+      "Restar significa quitar. Prueba 5 manzanas - 2 manzanas = 3.",
+      "Cuenta hacia atrás usando tus dedos - ¡es como bajar escaleras!",
+      "Imagina que tienes galletas y compartes algunas - ¿cuántas quedan?"
     ],
     "math:multiplication": [
-      "La multiplicación es suma repetida. 2 veces 3 es 2+2+2=6."
+      "La multiplicación es suma repetida. 2 veces 3 es 2+2+2=6.",
+      "Piensa en la multiplicación como hacer grupos iguales. ¡3×4 son 3 grupos de 4!",
+      "¡Dibuja círculos y llena cada uno con el mismo número de puntos para ver la multiplicación!"
     ],
     "math:division": [
-      "La división divide en partes iguales. 6 dividido por 2 es 3."
+      "La división divide en partes iguales. 6 dividido por 2 es 3.",
+      "¡Piensa en compartir juguetes por igual con amigos - todos reciben la misma cantidad!",
+      "Dibuja un círculo alrededor de cada grupo igual para ver la división en acción."
+    ],
+    "math:help": [
+      "¡Vamos a dividir esto en pasos más pequeños!",
+      "Intenta hacer dibujos para ayudarte a ver los números.",
+      "¡Usa objetos como bloques o monedas para contar!"
+    ],
+    "math:explain": [
+      "Déjame mostrarte con un ejemplo simple.",
+      "Piénsalo como un problema con historia - si tienes 3 dulces y recibes 2 más...",
+      "¡Podemos resolverlo paso a paso juntos!"
     ],
     "english:nouns": [
       "Un sustantivo es una persona, lugar o cosa. Ejemplo: gato, escuela, libro."

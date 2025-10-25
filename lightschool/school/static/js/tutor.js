@@ -4,10 +4,20 @@ let currentSubject, currentGrade, currentLocale;
 
 function openTutor() {
     document.getElementById('tutor-bubble').classList.remove('hidden');
-    // Assume from nav or something
-    currentSubject = document.querySelector('.nav-center span')?.textContent.toLowerCase().includes('math') ? 'math' : 'english';
-    currentGrade = parseInt(document.querySelector('.nav-center span:last-child')?.textContent.split(' ')[1]) || 1;
-    currentLocale = document.documentElement.lang;
+    // Get current subject and grade
+    const navSpans = document.querySelectorAll('.nav-center span');
+    if (navSpans.length >= 2) {
+        const subjectSpan = navSpans[0].textContent.toLowerCase();
+        currentSubject = subjectSpan.includes('math') ? 'math' : 'english';
+        const gradeText = navSpans[1].textContent;
+        const gradeMatch = gradeText.match(/\d+/);
+        currentGrade = gradeMatch ? parseInt(gradeMatch[0]) : 1;
+    } else {
+        currentSubject = 'math';  // default
+        currentGrade = 1;  // default
+    }
+    currentLocale = document.documentElement.lang || 'en';
+    console.log('Tutor initialized with:', { currentSubject, currentGrade, currentLocale });
 }
 
 function closeTutor() {
@@ -20,6 +30,20 @@ function sendTutorMessage() {
     if (!message) return;
     addMessage('user', message);
     input.value = '';
+    
+    // Make sure we have the required values
+    if (!currentSubject || !currentGrade || !currentLocale) {
+        console.log('Reinitializing tutor values...');
+        openTutor();  // Try to get values again
+    }
+    
+    // Log what we're about to send
+    console.log('Sending tutor request:', {
+        message,
+        subject: currentSubject,
+        grade: currentGrade,
+        locale: currentLocale
+    });
 
     fetch('/api/tutor/', {
         method: 'POST',
@@ -43,7 +67,13 @@ function sendTutorMessage() {
         }
     }).catch(error => {
         console.error('Tutor error:', error);
-        addMessage('lumi', 'Sorry, I\'m having trouble right now. Try again later!');
+        // Try to get more specific error message
+        error.response?.json().then(data => {
+            console.error('Server error:', data);
+            addMessage('lumi', `Error: ${data.error || 'Unknown server error'}`);
+        }).catch(() => {
+            addMessage('lumi', 'Sorry, I\'m having trouble right now. Try again later!');
+        });
     });
 }
 

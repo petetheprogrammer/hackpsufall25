@@ -3,12 +3,14 @@ import requests
 import random
 import re
 import ast
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Ollama local generate endpoint
-OLLAMA_URL = "http://localhost:11434/api/generate"
+# OpenAI configuration
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_URL = "https://api.openai.com/v1/chat/completions"
 
 def load_tutor_rules():
     """Load tutor rules JSON."""
@@ -94,89 +96,76 @@ def _safe_eval(expr: str) -> float | int:
 
     return _eval(node)
 
-def get_ollama_reply(message, subject, grade, locale):
-    """Get reply from Ollama."""
-    # Stronger system prompt: require a single short JSON reply with no chain-of-thought.
-    # We ask the model to output ONLY a single JSON object on the very first line like:
-    # {"answer":"..."}
-    # If it cannot comply, it should output an empty JSON with answer set to an empty string.
-    system_prompt = (
-        "You are Lumi, a cheerful K–5 tutor. Respond ONLY with a single JSON object on the first line: "
-        '{"answer":"<one short kid-friendly sentence>"}.'
-        f" No explanations, no chain-of-thought, no step-by-step. Use language: {locale}. Keep the answer under 140 characters."
+def get_ai_reply(message, subject, grade, locale):
+    """Get reply from OpenAI API."""
+    if not OPENAI_API_KEY:
+        print("ERROR: No OpenAI API key found")
+        return None
+        
+    print("\n=== DEBUG: Starting OpenAI Request ===")
+    print(f"Message: {message}")
+    print(f"Subject: {subject}")
+    print(f"Grade: {grade}")
+    print(f"Locale: {locale}")
+    
+    # Construct the system and user messages
+    system_msg = (
+        "You are Lumi, a cheerful K-5 tutor. You MUST respond with ONLY a single line containing "
+        "a JSON object in this EXACT format: {\"answer\":\"your response here\"} where your response "
+        f"is one short kid-friendly sentence. Use language: {locale}. Keep the answer under 140 characters."
     )
-    user_prompt = f"Subject: {subject}, Grade: {grade}. Question: {message}\nReturn only JSON on the first line."
-    payload = {
-        "model": "deepseek-r1:1.5b",
-        "prompt": f"{system_prompt}\n{user_prompt}",
-        "stream": False,
-        # prefer concise output; allow reasonable time but rely on fallback if slow
-        "options": {"num_predict": 100, "max_output_tokens": 150}
-    }
+    
+    user_msg = f"Subject: {subject}, Grade: {grade}. Question: {message}"
+    
     try:
-        # Allow more time for local inference but keep a practical timeout so UI can fall back
-        response = requests.post(OLLAMA_URL, json=payload, timeout=15)
+        headers = {
+            "Authorization": f"Bearer {OPENAI_API_KEY}",
+            "Content-Type": "application/json"
+        }
+        
+        payload = {
+            "model": "gpt-3.5-turbo",
+            "messages": [
+                {"role": "system", "content": system_msg},
+                {"role": "user", "content": user_msg}
+            ],
+            "temperature": 0.7,
+            "max_tokens": 150
+        }
+        
+        print("Sending request to OpenAI...")
+        response = requests.post(OPENAI_URL, headers=headers, json=payload, timeout=10)
+        print(f"OpenAI response status: {response.status_code}")
+        
         if response.status_code == 200:
-            data = response.json()
-            # Ollama's API may return the text in different fields; try several
-            reply = ''
-            if isinstance(data, dict):
-                reply = data.get('response') or data.get('output') or ''
-                # some responses include outputs list
-                if not reply and 'outputs' in data and isinstance(data['outputs'], list) and data['outputs']:
-                    # join text parts if present
-                    parts = []
-                    for o in data['outputs']:
-                        if isinstance(o, dict):
-                            text = o.get('content') or o.get('text') or o.get('response')
-                            if text:
-                                parts.append(text)
-                    reply = '\n'.join(parts)
-            reply = (reply or '').strip()
-            # Remove chain-of-thought markers like <think>...</think>
-            # Remove any complete <think>...</think> blocks, then strip stray tags
-            reply = re.sub(r"<think>.*?</think>", "", reply, flags=re.S)
-            reply = reply.replace('<think>', '').replace('</think>', '')
-            # Try to parse a JSON object from the model's output (preferred)
-            first_line = reply.splitlines()[0].strip() if reply.splitlines() else reply
-            parsed_answer = None
             try:
-                # If the model followed instruction, first_line should be JSON
-                obj = json.loads(first_line)
-                if isinstance(obj, dict) and 'answer' in obj and isinstance(obj['answer'], str):
-                    parsed_answer = obj['answer'].strip()
-            except Exception:
-                parsed_answer = None
-
-            if parsed_answer:
-                # enforce shortness
-                if len(parsed_answer) > 140:
-                    parsed_answer = parsed_answer[:137].rstrip() + '...'
-                return parsed_answer
-
-            # If JSON parse failed, save the raw reply to a debug log for analysis, then return None
-            try:
-                logs_dir = BASE_DIR / 'logs'
-                logs_dir.mkdir(parents=True, exist_ok=True)
-                log_file = logs_dir / 'tutor_raw_responses.log'
-                with open(log_file, 'a', encoding='utf-8') as lf:
-                    lf.write('---\n')
-                    lf.write(f'timestamp: {__import__("datetime").datetime.utcnow().isoformat()}Z\n')
-                    lf.write(f'subject: {subject} grade: {grade} locale: {locale}\n')
-                    lf.write(f'message: {message}\n')
-                    lf.write('raw_reply:\n')
-                    lf.write(reply + '\n')
-            except Exception:
-                # never fail because of logging
-                pass
-
-            return None
-    except:
-        pass
+                data = response.json()
+                reply = data['choices'][0]['message']['content'].strip()
+                print(f"Raw reply: {reply}")
+                
+                # Try to parse as JSON
+                try:
+                    parsed = json.loads(reply)
+                    if isinstance(parsed, dict) and 'answer' in parsed:
+                        return parsed['answer'].strip()
+                except:
+                    print("Could not parse response as JSON")
+                    
+            except Exception as e:
+                print(f"Error parsing response: {str(e)}")
+                
+        else:
+            print(f"Error from OpenAI API: {response.text}")
+            
+    except Exception as e:
+        print(f"Error making request: {str(e)}")
+        import traceback
+        print(traceback.format_exc())
+        return None
     return None
 
 def get_tutor_reply(message, subject, grade, locale):
-    """Get tutor reply, try Ollama first, fallback to rules."""
+    """Get tutor reply, try OpenAI first, fallback to rules."""
     # Short-circuit: if this is a simple arithmetic question, answer immediately
     expr = _extract_arithmetic_expression(message)
     if expr:
@@ -190,8 +179,8 @@ def get_tutor_reply(message, subject, grade, locale):
             # fall through to normal behavior
             pass
 
-    reply = get_ollama_reply(message, subject, grade, locale)
-    source = "ollama" if reply else "rules"
+    reply = get_ai_reply(message, subject, grade, locale)
+    source = "ai" if reply else "rules"
     if not reply:
         reply = get_rule_based_reply(message, subject, grade, locale)
     return {"reply": reply, "source": source}
